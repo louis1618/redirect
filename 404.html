@@ -1,29 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="리다이렉트를 요청하도록 하는 페이지입니다"
-    />
-    <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="./manifest.json" />
-    <title>Louis1618 | Redirect</title>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" href="./favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+        name="description"
+        content="리다이렉트를 요청하도록 하는 페이지입니다"
+      />
+      <link rel="apple-touch-icon" href="./logo192.png" />
+      <link rel="manifest" href="./manifest.json" />
+      <title>Louis1618 | Redirect</title>
 
-    <meta http-equiv="refresh" content="0; url=/#/">
-    <script>
-        const redirectToHash = () => {
-            const path = window.location.pathname;
-            const hash = path.replace(/\/$/, '');
-            window.location.replace(`/#${hash}`);
+      <meta http-equiv="refresh" content="0; url=/#/">
+      <script>
+          const redirectToHash = () => {
+          const path = window.location.pathname;
+          const basePath = '/redirect';
+          if (path.startsWith(basePath)) {
+            const relativePath = path.substring(basePath.length);
+            const hash = relativePath.replace(/\/$/, '');
+            window.location.replace(`${basePath}/#${hash}`);
+          } else {
+            window.location.replace('/redirect/#/');
+          }
         };
         redirectToHash();
-    </script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-  </body>
-</html>
+      </script>
+    </head>
+    <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+    </body>
+  </html>
