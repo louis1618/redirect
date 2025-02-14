@@ -2,7 +2,7 @@
   "name": "redirect-manager",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://louis1618.github.io/redirect",
+  "homepage": "https://louis1618.shop/redirect",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
