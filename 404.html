@@ -14,18 +14,20 @@
       <title>Louis1618 | Redirect</title>
 
       <script>
-        const redirectToPath = () => {
-          const path = window.location.pathname;
+      const redirectToPath = () => {
+        const path = window.location.pathname;
 
-          if (path === '/' || path === '') {
-            window.location.replace('/');
-          } else {
-            const cleanPath = path.replace(/\/$/, '');
-            window.location.replace(cleanPath);
-          }
-        };
-        redirectToHash();
+        if (path === '/' || path === '') {
+          window.location.replace('/#/');
+        } else {
+          const cleanPath = path.replace(/\/$/, '');
+          window.location.replace(`/redirect/#${cleanPath}`); 
+        }
+      };
+
+      redirectToPath();
       </script>
+      
     </head>
     <body>
       <noscript>You need to enable JavaScript to run this app.</noscript>
