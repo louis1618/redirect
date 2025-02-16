@@ -15,10 +15,10 @@
         const path = window.location.pathname;
         
         if (path === '/' || path === '') {
-          window.location.replace('/');  
+          window.location.replace('/#/');  
         } else {
           const cleanPath = path.replace(/\/$/, '');
-          window.location.replace(`/${cleanPath}`);
+          window.location.replace(`/#${cleanPath}`);
         }
       };
 
