@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+}
+
+.b8b986-bg {
+    height: 100vh;
+    width: 100vw;
+    background-color:rgba(213, 210, 210, 0.308);
+}
+
+.ghostwhite-bg {
+    height: 100vh;
+    width: 100vw;
+    background-color: ghostwhite;
+}
+
+@import "tailwindcss";
